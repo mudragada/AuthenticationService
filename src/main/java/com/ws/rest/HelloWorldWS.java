@@ -9,8 +9,8 @@ import javax.ws.rs.core.Response;
 @Path("/hello")
 public class HelloWorldWS {
 	@GET
-	@Path("/{param}")
-	public Response getMsg(@PathParam("param") String msg) { 
+	@Path("/{name}")
+	public Response getMsg(@PathParam("name") String msg) { 
 		String output = "Jersey say : " + msg;
 		return Response.status(200).entity(output).build();
 	}

@@ -7,6 +7,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.hibernate.NonUniqueResultException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -16,53 +17,47 @@ import rfo.ws.dao.Account;
 import rfo.ws.util.HibernateUtil;
 
 
-@Path("/hello")
+@Path("/account")
 public class AccountService {
 	@GET
-	@Path("/account/{id}")
+	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
     public Account getAccountById(@PathParam("id") int accountId) {
-		System.out.println("######### Inside getAccountById#####");
         Account user = null;
-        Transaction trns = null;
+        Transaction tx = null;
         Session session = null;
         SessionFactory sSessionFactory = HibernateUtil.getSessionFactory();
-        if(sSessionFactory!=null){
-        	System.out.println("######### SessionFactory not NULL #####");
-        	session = sSessionFactory.openSession();
-        }
-        else{
-        	System.out.println("######### SessionFactory is NULL, exiting.. #####");
+        if(sSessionFactory==null){
+        	System.out.println("Unable to create a sessionFactory Obj");
         	return null;
         }
         try {
-            trns = session.beginTransaction();
-            String queryString = "from Account where id = :id";
+    		session = sSessionFactory.openSession();
+    		tx = session.beginTransaction();
+    		tx.setTimeout(10);
+            String queryString = "from Account where id = " + accountId;
             Query query = session.createQuery(queryString);
-            query.setInteger("id", accountId);
             user = (Account) query.uniqueResult();
-        } catch (RuntimeException e) {
-            e.printStackTrace();
-        } finally {
+        }
+        catch(RuntimeException rex){
+        	System.out.println("RTE on beginTransaction()");
+        	try{
+        		tx.rollback();
+        	}
+        	catch(RuntimeException rexe){
+        		System.out.println("RTE on tx rollback()");
+        	}
+        }finally {
             session.flush();
             session.close();
         }
+        
+        if (user == null) {
+             throw new RuntimeException("Unable to find Account for account number :" + accountId);
+        }
+        else{
+        	
+        }
         return user;
     }
-//	public Response getAccount(@PathParam("name") String msg) { 
-//		
-//	     System.out.println("Maven + Hibernate + MySQL");
-//	     Session session = HibernateUtil.getSessionFactory().openSession();
-//	 
-//	        session.beginTransaction();
-//	        Account stock = new Account();
-//	 
-//	        stock.setStockCode("4715");
-//	        stock.setStockName("GENM");
-//	 
-//	        session.save(stock);
-//	        session.getTransaction().commit();
-//		String output = "Jersey say : " + msg;
-//		return Response.status(200).entity(output).build();
-//	}
 }

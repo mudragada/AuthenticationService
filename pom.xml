@@ -14,11 +14,28 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <!-- Jersey -->
     <dependency>
-      <groupId>com.sun.jersey</groupId>
-      <artifactId>jersey-server</artifactId>
-      <version>1.9</version>
-    </dependency>
+		<groupId>com.sun.jersey</groupId>
+		<artifactId>jersey-server</artifactId>
+		<version>1.19</version>
+	</dependency>
+	<dependency>
+		<groupId>com.sun.jersey</groupId>
+		<artifactId>jersey-servlet</artifactId>
+		<version>1.19</version>
+	</dependency>
+	<dependency>
+		<groupId>com.sun.jersey</groupId>
+		<artifactId>jersey-json</artifactId>
+		<version>1.19</version>
+   </dependency>
+   <dependency>
+   	<groupId>com.sun.jersey</groupId>
+    <artifactId>jersey-client</artifactId>
+    <version>1.19</version>
+   </dependency>
+
     <!-- MySQL database driver -->
 	<dependency>
 		<groupId>mysql</groupId>

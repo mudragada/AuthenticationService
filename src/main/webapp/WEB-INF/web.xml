@@ -5,18 +5,18 @@
     version="3.0">
     <display-name>Servlet 3.0 Web Application</display-name>
 	<servlet>
-		<servlet-name>HelloWorldWS</servlet-name>
+		<servlet-name>RFOAccountWS</servlet-name>
 		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
 		<init-param>
 		     <param-name>com.sun.jersey.config.property.packages</param-name>
-		     <param-value>com.ws.rest</param-value>
+		     <param-value>rfo.ws.rest</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
  
 	<servlet-mapping>
-		<servlet-name>HelloWorldWS</servlet-name>
-		<url-pattern>/rest/*</url-pattern>
+		<servlet-name>RFOAccountWS</servlet-name>
+		<url-pattern>/api/*</url-pattern>
 	</servlet-mapping>
  
 </web-app>

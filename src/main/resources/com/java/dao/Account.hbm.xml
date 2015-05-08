@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.java.dao.Account" table="USER_ACCOUNT">
+        <id name="AccountId" type="java.lang.Integer">
+            <column name="account_id" length="10" not-null="true" unique="true"/>
+            <generator class="identity" />
+        </id>
+        <property name="AccountNumber" type="java.lang.Integer">
+            <column name="account_number" length="10" not-null="true" />
+        </property>
+        <property name="AccountTypeCode" type="java.lang.Integer">
+            <column name="account_type" length="1" not-null="true"/>
+        </property>
+        <property name="FirstName" type="java.lang.String">
+            <column name="first_name" length="30" not-null="true" />
+        </property>
+        <property name="LastName" type="java.lang.String">
+            <column name="last_name" length="30" not-null="true"/>
+        </property>
+        <property name="Birthday" type="java.sql.Date">
+            <column name="birthday" length="20" not-null="true"/>
+        </property>
+        <property name="TaxExempt" type="java.lang.Boolean">
+            <column name="tax_exempt" length="1" not-null="true"/>
+        </property>
+        <property name="SoftTerminationDate" type="java.sql.Date">
+            <column name="soft_termination_date" length="20"/>
+        </property>
+        <property name="HardTerminationDate" type="java.lang.String">
+            <column name="hard_termination_date" length="20"/>
+        </property>
+        <property name="Active" type="java.lang.Boolean">
+            <column name="active" length="1" not-null="true"/>
+        </property>
+        <property name="BusinessEntity" type="java.lang.Boolean">
+            <column name="business_entity" length="1" not-null="true"/>
+        </property>
+        <property name="AccountStatusCode" type="java.lang.Integer">
+            <column name="account_status" length="1" not-null="true"/>
+        </property>
+        <property name="UserName" type="java.lang.String">
+            <column name="username" length="20" not-null="true"/>
+        </property>
+        <property name="Password" type="java.lang.String">
+            <column name="password" length="20" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

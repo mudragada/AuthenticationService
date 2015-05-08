@@ -37,7 +37,7 @@ public class AccountService {
         }
         try {
             trns = session.beginTransaction();
-            String queryString = "from user_account where id = :id";
+            String queryString = "from Account where id = :id";
             Query query = session.createQuery(queryString);
             query.setInteger("id", accountId);
             user = (Account) query.uniqueResult();

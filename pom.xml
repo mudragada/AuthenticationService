@@ -7,6 +7,11 @@
   <version>1.0-SNAPSHOT</version>
   <name>RFOAccountWS Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  <properties>  
+  	<log4j.version>1.2.17</log4j.version>
+  	<jersey.version>1.19</jersey.version>
+  	<mysql.version>5.1.9</mysql.version>
+  </properties> 
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -14,35 +19,40 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+      <dependency>  
+   <groupId>log4j</groupId>  
+   <artifactId>log4j</artifactId>  
+   <version>${log4j.version}</version>  
+  </dependency>
     <!-- Jersey -->
     <dependency>
 		<groupId>com.sun.jersey</groupId>
 		<artifactId>jersey-server</artifactId>
-		<version>1.19</version>
+		<version>${jersey.version}</version>
 	</dependency>
 	<dependency>
 		<groupId>com.sun.jersey</groupId>
 		<artifactId>jersey-servlet</artifactId>
-		<version>1.19</version>
+		<version>${jersey.version}</version>
 	</dependency>
 	<dependency>
 		<groupId>com.sun.jersey</groupId>
 		<artifactId>jersey-json</artifactId>
-		<version>1.19</version>
+		<version>${jersey.version}</version>
    </dependency>
    <dependency>
    	<groupId>com.sun.jersey</groupId>
     <artifactId>jersey-client</artifactId>
-    <version>1.19</version>
+    <version>${jersey.version}</version>
    </dependency>
 
     <!-- MySQL database driver -->
 	<dependency>
 		<groupId>mysql</groupId>
 		<artifactId>mysql-connector-java</artifactId>
-		<version>5.1.9</version>
+		<version>${mysql.version}</version>
 	</dependency>
-	
+
 	<!-- Hibernate core -->
 	<dependency>
 	<groupId>org.hibernate</groupId>
@@ -74,7 +84,7 @@
         <version>1.0.1.Final</version>
     </dependency>
     
-	<!-- Hibernate library dependecy start -->
+	<!-- Hibernate library dependency -->
 	<dependency>
 		<groupId>dom4j</groupId>
 		<artifactId>dom4j</artifactId>

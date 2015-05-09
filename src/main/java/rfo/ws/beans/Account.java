@@ -1,5 +1,4 @@
-package rfo.ws.dao;
-
+package rfo.ws.beans;
 import java.sql.Date;
 
 public class Account implements java.io.Serializable{

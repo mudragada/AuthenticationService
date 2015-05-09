@@ -23,7 +23,7 @@ public class AccountRestService {
 	@GET
 	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Account getAccountById(@PathParam("id") int id){
+	public Account getAccountById(@PathParam("id") String id){
 		Account accountObj = null;
 		try {
 			accountObj = acDaoObj.getAccountById(id);

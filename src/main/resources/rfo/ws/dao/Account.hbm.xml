@@ -2,13 +2,13 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="rfo.ws.beans.Account" table="user_account">
-        <id name="AccountId" type="java.lang.Integer">
-            <column name="id" length="10" not-null="true" unique="true"/>
+	<class name="rfo.ws.beans.Account" table="user_account">
+		<id name="AccountId" type="java.lang.String">
+			<column name="id" length="10" not-null="true" unique="true"/>
             <generator class="identity" />
         </id>
-        <property name="AccountNumber" type="java.lang.Integer">
-            <column name="account_number" length="10" not-null="true" />
+        <property name="AccountNumber" type="java.lang.String">
+        	<column name="account_number" length="10" not-null="true" />
         </property>
         <property name="AccountTypeCode" type="java.lang.Integer">
             <column name="account_type" length="1" not-null="true"/>
@@ -28,7 +28,7 @@
         <property name="SoftTerminationDate" type="java.sql.Date">
             <column name="soft_termination_date" length="20"/>
         </property>
-        <property name="HardTerminationDate" type="java.lang.String">
+        <property name="HardTerminationDate" type="java.sql.Date">
             <column name="hard_termination_date" length="20"/>
         </property>
         <property name="Active" type="java.lang.Boolean">
@@ -40,11 +40,68 @@
         <property name="AccountStatusCode" type="java.lang.Integer">
             <column name="account_status" length="1" not-null="true"/>
         </property>
-        <property name="UserName" type="java.lang.String">
-            <column name="username" length="20" not-null="true"/>
+        <property name="NickName" type="java.lang.String">
+            <column name="nickname" length="20" not-null="true"/>
         </property>
-        <property name="Password" type="java.lang.String">
-            <column name="password" length="20" not-null="true"/>
+        <property name="GenderId" type="java.lang.Integer">
+            <column name="gender_id" length="20" not-null="true"/>
+        </property>
+        <property name="LegalName" type="java.lang.String">
+            <column name="legal_name" length="20" not-null="true"/>
+        </property>
+        <property name="NextRenewalDate" type="java.sql.Date">
+            <column name="next_renewal_date" length="20"/>
+        </property>
+        <property name="LastRenewalDate" type="java.sql.Date">
+            <column name="last_renewal_date" length="20"/>
+        </property>
+        <property name="CurrencyCode" type="java.lang.String">
+            <column name="currency_code" length="3"/>
+        </property>
+        <property name="CurrencyName" type="java.lang.String">
+            <column name="currency_name" length="20"/>
+        </property>
+        <property name="CountryCode" type="java.lang.String">
+            <column name="country_code" length="3"/>
+        </property>
+        <property name="DisplayTaxNumber" type="java.lang.String">
+            <column name="display_tax_number" length="15" not-null="true" unique="true"/>
+        </property>
+        <property name="TimeZoneCode" type="java.lang.String">
+            <column name="time_zone_code" length="3" not-null="true"/>
+        </property>
+        <property name="LanguageCode" type="java.lang.String">
+            <column name="language_code" length="3" not-null="true"/>
+        </property>
+        <property name="LanguageName" type="java.lang.String">
+            <column name="language_name" length="20" not-null="true"/>
+        </property>
+        <property name="EnrollmentDate" type="java.sql.Date">
+            <column name="enrollment_date" length="20" not-null="true"/>
+        </property>
+        <property name="PersonalPhotoUrl" type="java.lang.String">
+            <column name="personal_photo_url" length="40"/>
+        </property>
+        <property name="SponsorId" type="java.lang.String">
+            <column name="sponsor_id" length="20" not-null="true"/>
+        </property>
+        <property name="SponsorAccountNumber" type="java.lang.String">
+            <column name="sponsor_account_number" length="20" not-null="true"/>
+        </property>
+        <property name="SponsorName" type="java.lang.String">
+            <column name="sponsor_name" length="40" not-null="true"/>
+        </property>
+        <property name="EnrollerId" type="java.lang.String">
+            <column name="enroller_id" length="20" not-null="true"/>
+        </property>
+        <property name="EnrollerAccountNumber" type="java.lang.String">
+            <column name="enroller_account_number" length="20" not-null="true"/>
+        </property>
+        <property name="EnrollerName" type="java.lang.String">
+            <column name="enroller_name" length="20" not-null="true"/>
+        </property>
+        <property name="UpdateReasonId" type="java.lang.String">
+            <column name="update_reason_id" length="20"/>
         </property>
     </class>
 </hibernate-mapping>

@@ -46,7 +46,7 @@ public class AccountDaoImpl implements AccountDao{
 	}
 
 	@Override
-	public Account getAccountById(Integer id) throws Exception {
+	public Account getAccountById(String id) throws Exception {
         Account user = null;
         Transaction tx = null;
         Session session = null;

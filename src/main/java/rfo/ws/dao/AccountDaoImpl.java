@@ -2,7 +2,6 @@ package rfo.ws.dao;
 
 import java.util.List;
 
-import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -29,10 +28,10 @@ public class AccountDaoImpl implements AccountDao{
 	public List<Account> getAccountList() throws Exception {
 		Session session = sessionFactory.openSession();
 		Transaction tx = session.beginTransaction();
-		List<Account> employeeList = session.createCriteria(Account.class).list();
+		List<Account> accList = session.createCriteria(Account.class).list();
 		tx.commit();
 		session.close();
-		return employeeList;  
+		return accList;  
 	}
 
 	@Override

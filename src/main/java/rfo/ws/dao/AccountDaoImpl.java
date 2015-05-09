@@ -50,13 +50,11 @@ public class AccountDaoImpl implements AccountDao{
         Account user = null;
         Transaction tx = null;
         Session session = null;
-        System.out.println("############Inside getAccountById");
         try {
     		session = sessionFactory.openSession();
     		tx = session.beginTransaction();
     		tx.setTimeout(10);
     		user = (Account)session.get(Account.class, id); 
-    		System.out.println("###User Details - " + user.getFirstName());
         }
         catch(RuntimeException rex){
         	System.out.println("RTE on beginTransaction()");

@@ -1,4 +1,4 @@
-package rfo.ws.dao;
+package com.rf.dao;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-import rfo.ws.beans.Account;
-import rfo.ws.util.HibernateUtil;
+import com.rf.beans.Account;
+import com.rf.util.HibernateUtil;
 
 public class AccountDaoImpl implements AccountDao{
 	SessionFactory sessionFactory;

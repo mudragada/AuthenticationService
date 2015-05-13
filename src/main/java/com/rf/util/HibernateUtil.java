@@ -1,4 +1,4 @@
-package rfo.ws.util;
+package com.rf.util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;

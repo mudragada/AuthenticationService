@@ -1,4 +1,4 @@
-package com.rf.beans;
+package com.rf.security.beans;
 
 public class UserCredentials {
 	

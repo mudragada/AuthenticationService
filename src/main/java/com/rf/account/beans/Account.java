@@ -1,4 +1,4 @@
-package com.rf.beans;
+package com.rf.account.beans;
 import java.sql.Date;
 
 public class Account implements java.io.Serializable{

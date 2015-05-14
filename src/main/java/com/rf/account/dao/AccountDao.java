@@ -1,7 +1,7 @@
-package com.rf.dao;
+package com.rf.account.dao;
 import java.util.List;
 
-import com.rf.beans.Account;
+import com.rf.account.beans.Account;
 public interface AccountDao {  
 	  
 	 public boolean addAccount(Account employee) throws Exception;  

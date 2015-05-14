@@ -1,4 +1,4 @@
-package com.rf.rest;
+package com.rf.account.service;
 
 import java.util.List;
 
@@ -8,9 +8,9 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import com.rf.beans.Account;
-import com.rf.dao.AccountDao;
-import com.rf.dao.AccountDaoImpl;
+import com.rf.account.beans.Account;
+import com.rf.account.dao.AccountDao;
+import com.rf.account.dao.AccountDaoImpl;
 
 
 @Path("/account")

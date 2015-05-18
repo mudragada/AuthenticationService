@@ -1,14 +1,14 @@
-package com.rf.security.authentication;
+package com.rf.rest.service;
 
 import java.util.Map;
 
 import javax.ws.rs.Consumes;
-
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import com.rf.security.authentication.LoginAuthHandler;
 import com.rf.security.beans.UserCredentials;
 
 @Path("/login")

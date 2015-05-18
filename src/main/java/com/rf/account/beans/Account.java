@@ -5,236 +5,238 @@ public class Account implements java.io.Serializable{
 	
 	private static final long serialVersionUID = 1L;
 
-	private String AccountNumber;
-	private String AccountId;
-	private Integer AccountTypeCode;
-	private Integer AccountStatusCode;
-	private Integer GenderId;
-	private String FirstName;
-	private String LastName;
-	private String NickName;
-	private String LegalName;
-	private String CurrencyCode;
-	private String CurrencyName;
-	private String CountryCode;
-	private String DisplayTaxNumber;
-	private String TimeZoneCode;
-	private String LanguageCode;
-	private String LanguageName;
-	private String PersonalPhotoUrl;
-	private String SponsorId;
-	private String SponsorAccountNumber;
-	private String SponsorName;
-	private String EnrollerId;
-	private String EnrollerAccountNumber;
-	private String EnrollerName;
-	private String UpdateReasonId;
+	private String accountNumber;
+	private String id;
+
+	private Integer accountTypeCode;
+	private Integer accountStatusCode;
+	private Integer genderId;
+	private String firstName;
+	private String lastName;
+	private String nickName;
+	private String legalName;
+	private String currencyCode;
+	private String currencyName;
+	private String countryCode;
+	private String displayTaxNumber;
+	private String timeZoneCode;
+	private String languageCode;
+	private String languageName;
+	private String personalPhotoUrl;
+	private String sponsorId;
+	private String sponsorAccountNumber;
+	private String sponsorName;
+	private String enrollerId;
+	private String enrollerAccountNumber;
+	private String enrollerName;
+	private String updateReasonId;
 	
-	private Date Birthday;
-	private Date SoftTerminationDate;
-	private Date HardTerminationDate;
-	private Date NextRenewalDate;
-	private Date LastRenewalDate;
-	private Date EnrollmentDate;
-	Boolean TaxExempt;
-	Boolean Active;
-	Boolean BusinessEntity;
+	private Date birthday;
+	private Date softTerminationDate;
+	private Date hardTerminationDate;
+	private Date nextRenewalDate;
+	private Date lastRenewalDate;
+	private Date enrollmentDate;
+	Boolean taxExempt;
+	Boolean active;
+	Boolean businessEntity;
 	public String getAccountNumber() {
-		return AccountNumber;
+		return accountNumber;
 	}
 	public void setAccountNumber(String accountNumber) {
-		AccountNumber = accountNumber;
+		this.accountNumber = accountNumber;
 	}
-	public String getAccountId() {
-		return AccountId;
+	public String getId() {
+		return id;
 	}
-	public void setAccountId(String accountId) {
-		AccountId = accountId;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public Integer getAccountTypeCode() {
-		return AccountTypeCode;
+		return accountTypeCode;
 	}
 	public void setAccountTypeCode(Integer accountTypeCode) {
-		AccountTypeCode = accountTypeCode;
+		this.accountTypeCode = accountTypeCode;
 	}
 	public Integer getAccountStatusCode() {
-		return AccountStatusCode;
+		return accountStatusCode;
 	}
 	public void setAccountStatusCode(Integer accountStatusCode) {
-		AccountStatusCode = accountStatusCode;
+		this.accountStatusCode = accountStatusCode;
 	}
 	public Integer getGenderId() {
-		return GenderId;
+		return genderId;
 	}
 	public void setGenderId(Integer genderId) {
-		GenderId = genderId;
+		this.genderId = genderId;
 	}
 	public String getFirstName() {
-		return FirstName;
+		return firstName;
 	}
 	public void setFirstName(String firstName) {
-		FirstName = firstName;
+		this.firstName = firstName;
 	}
 	public String getLastName() {
-		return LastName;
+		return lastName;
 	}
 	public void setLastName(String lastName) {
-		LastName = lastName;
+		this.lastName = lastName;
 	}
 	public String getNickName() {
-		return NickName;
+		return nickName;
 	}
 	public void setNickName(String nickName) {
-		NickName = nickName;
+		this.nickName = nickName;
 	}
 	public String getLegalName() {
-		return LegalName;
+		return legalName;
 	}
 	public void setLegalName(String legalName) {
-		LegalName = legalName;
+		this.legalName = legalName;
 	}
 	public String getCurrencyCode() {
-		return CurrencyCode;
+		return currencyCode;
 	}
 	public void setCurrencyCode(String currencyCode) {
-		CurrencyCode = currencyCode;
+		this.currencyCode = currencyCode;
 	}
 	public String getCurrencyName() {
-		return CurrencyName;
+		return currencyName;
 	}
 	public void setCurrencyName(String currencyName) {
-		CurrencyName = currencyName;
+		this.currencyName = currencyName;
 	}
 	public String getCountryCode() {
-		return CountryCode;
+		return countryCode;
 	}
 	public void setCountryCode(String countryCode) {
-		CountryCode = countryCode;
+		this.countryCode = countryCode;
 	}
 	public String getDisplayTaxNumber() {
-		return DisplayTaxNumber;
+		return displayTaxNumber;
 	}
 	public void setDisplayTaxNumber(String displayTaxNumber) {
-		DisplayTaxNumber = displayTaxNumber;
-	}
-	public String getTimeZoneCode() {
-		return TimeZoneCode;
-	}
-	public void setTimeZoneCode(String timeZoneCode) {
-		TimeZoneCode = timeZoneCode;
+		this.displayTaxNumber = displayTaxNumber;
 	}
 	public String getLanguageCode() {
-		return LanguageCode;
+		return languageCode;
 	}
 	public void setLanguageCode(String languageCode) {
-		LanguageCode = languageCode;
+		this.languageCode = languageCode;
 	}
 	public String getLanguageName() {
-		return LanguageName;
+		return languageName;
 	}
 	public void setLanguageName(String languageName) {
-		LanguageName = languageName;
+		this.languageName = languageName;
 	}
 	public String getPersonalPhotoUrl() {
-		return PersonalPhotoUrl;
+		return personalPhotoUrl;
 	}
 	public void setPersonalPhotoUrl(String personalPhotoUrl) {
-		PersonalPhotoUrl = personalPhotoUrl;
+		this.personalPhotoUrl = personalPhotoUrl;
 	}
 	public String getSponsorId() {
-		return SponsorId;
+		return sponsorId;
 	}
 	public void setSponsorId(String sponsorId) {
-		SponsorId = sponsorId;
+		this.sponsorId = sponsorId;
 	}
 	public String getSponsorAccountNumber() {
-		return SponsorAccountNumber;
+		return sponsorAccountNumber;
 	}
-	public void setSponsorAccountNumber(String sponsorAccount) {
-		SponsorAccountNumber = sponsorAccount;
+	public void setSponsorAccountNumber(String sponsorAccountNumber) {
+		this.sponsorAccountNumber = sponsorAccountNumber;
 	}
 	public String getSponsorName() {
-		return SponsorName;
+		return sponsorName;
 	}
 	public void setSponsorName(String sponsorName) {
-		SponsorName = sponsorName;
+		this.sponsorName = sponsorName;
 	}
 	public String getEnrollerId() {
-		return EnrollerId;
+		return enrollerId;
 	}
 	public void setEnrollerId(String enrollerId) {
-		EnrollerId = enrollerId;
+		this.enrollerId = enrollerId;
 	}
 	public String getEnrollerAccountNumber() {
-		return EnrollerAccountNumber;
+		return enrollerAccountNumber;
 	}
 	public void setEnrollerAccountNumber(String enrollerAccountNumber) {
-		EnrollerAccountNumber = enrollerAccountNumber;
+		this.enrollerAccountNumber = enrollerAccountNumber;
 	}
 	public String getEnrollerName() {
-		return EnrollerName;
+		return enrollerName;
 	}
 	public void setEnrollerName(String enrollerName) {
-		EnrollerName = enrollerName;
-	}
-	public String getUpdateReasonId() {
-		return UpdateReasonId;
-	}
-	public void setUpdateReasonId(String updateReasonId) {
-		UpdateReasonId = updateReasonId;
+		this.enrollerName = enrollerName;
 	}
 	public Date getBirthday() {
-		return Birthday;
+		return birthday;
 	}
 	public void setBirthday(Date birthday) {
-		Birthday = birthday;
+		this.birthday = birthday;
 	}
 	public Date getSoftTerminationDate() {
-		return SoftTerminationDate;
+		return softTerminationDate;
 	}
 	public void setSoftTerminationDate(Date softTerminationDate) {
-		SoftTerminationDate = softTerminationDate;
+		this.softTerminationDate = softTerminationDate;
 	}
 	public Date getHardTerminationDate() {
-		return HardTerminationDate;
+		return hardTerminationDate;
 	}
 	public void setHardTerminationDate(Date hardTerminationDate) {
-		HardTerminationDate = hardTerminationDate;
+		this.hardTerminationDate = hardTerminationDate;
 	}
 	public Date getNextRenewalDate() {
-		return NextRenewalDate;
+		return nextRenewalDate;
 	}
 	public void setNextRenewalDate(Date nextRenewalDate) {
-		NextRenewalDate = nextRenewalDate;
+		this.nextRenewalDate = nextRenewalDate;
 	}
 	public Date getLastRenewalDate() {
-		return LastRenewalDate;
+		return lastRenewalDate;
 	}
 	public void setLastRenewalDate(Date lastRenewalDate) {
-		LastRenewalDate = lastRenewalDate;
+		this.lastRenewalDate = lastRenewalDate;
 	}
 	public Date getEnrollmentDate() {
-		return EnrollmentDate;
+		return enrollmentDate;
 	}
 	public void setEnrollmentDate(Date enrollmentDate) {
-		EnrollmentDate = enrollmentDate;
+		this.enrollmentDate = enrollmentDate;
 	}
 	public Boolean getTaxExempt() {
-		return TaxExempt;
+		return taxExempt;
 	}
 	public void setTaxExempt(Boolean taxExempt) {
-		TaxExempt = taxExempt;
+		this.taxExempt = taxExempt;
 	}
 	public Boolean getActive() {
-		return Active;
+		return active;
 	}
 	public void setActive(Boolean active) {
-		Active = active;
+		this.active = active;
 	}
 	public Boolean getBusinessEntity() {
-		return BusinessEntity;
+		return businessEntity;
 	}
 	public void setBusinessEntity(Boolean businessEntity) {
-		BusinessEntity = businessEntity;
+		this.businessEntity = businessEntity;
 	}
+	public String getTimeZoneCode() {
+		return timeZoneCode;
+	}
+	public void setTimeZoneCode(String timeZoneCode) {
+		this.timeZoneCode = timeZoneCode;
+	}
+	public String getUpdateReasonId() {
+		return updateReasonId;
+	}
+	public void setUpdateReasonId(String updateReasonId) {
+		this.updateReasonId = updateReasonId;
+	}
+
 }
